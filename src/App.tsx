@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './assets/css/main.css';
 import { Ed25519PrivateKey, Ed25519PublicKey } from "@hashgraph/sdk";
 import { signMessage, str2byte, byte2hex, verifyMessage, hex2byte } from "./lib/utils";
-import * as nacl from "tweetnacl";
 
 function App() {
   
