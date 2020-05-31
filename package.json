@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@hashgraph/sdk": "^1.1.12",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -16,10 +17,11 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "npm run css && react-scripts start",
+    "build": "npm run css && react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "css": "postcss src/assets/css/tailwind.css -o src/assets/css/main.css"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,5 +37,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.0",
+    "postcss-cli": "^7.1.1",
+    "tailwindcss": "^1.4.6"
   }
 }
